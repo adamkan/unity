@@ -33,10 +33,7 @@ void TestFairy_resume()
 
 const char * TestFairy_sessionUrl()
 {
-	NSString *sessionUrl = [[TestFairy sessionUrl] UTF8String];
-	char* res = (char*)malloc(strlen(sessionUrl) + 1);
-	strcpy(res, sessionUrl);
-	
-	return res;
+	const char *sessionUrl = [[TestFairy sessionUrl] UTF8String];
+	return strdup(sessionUrl);
 }
 
